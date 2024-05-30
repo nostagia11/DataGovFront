@@ -1,0 +1,171 @@
+
+
+
+
+
+<style>
+    h1 {
+        margin-left: 300px; /* Add an empty space on the left side of the title */
+    }
+
+    .table-container {
+        padding-left: 300px; /* Add an empty space on the left side of the table */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center; /* Center the content of the table */
+    }
+
+    .table th {
+        text-align: right; /* Center the content of the table header */
+    }
+
+    .table th, .table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+</style>
+ 
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+    class="content-container"
+  >
+   
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title"><a href="Regleback">Liste</a></h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <div class="col-12">
+            <button  routerLink="/addcol" routerLinkActive="active" class="btn btn-primary" type="button">Add</button>
+          
+          <div class="card">
+            <div class="container">
+                <h5 class="card-title">Column List</h5>
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'es,fr,de,ja,ko' }, 'google_translate_element');
+                  }
+              </script>
+              <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              <div id="google_translate_element"></div>
+                <div class="table-responsive">
+<table class =  "table table-striped">
+    <thead>
+        <tr>
+            <th>Tech name  </th>
+            <th> Synonym</th>
+            <th>type</th>
+            <th>Format</th>
+            <th>Label</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let col of Columns">
+            <td>{{col.tname}}</td>
+            <td>{{col.syno}}</td>
+            <td>{{col.type}}</td>
+            <td>{{col.format}}</td>
+            <td *ngIf="col.label; else noLabel"> 
+              {{ col.label.name }}
+            </td>
+            <ng-template #noLabel>No label</ng-template>
+
+      
+            
+            <td>
+                <button  class="btn btn-primary" (click)="updateColumn(col.id)" class="btn btn-primary" >update</button>
+                <button (click)="deleteColumn(col.id)" class="btn btn-danger" >delete</button>
+                <button (click)="detailColumn(col.id)" class="btn btn-danger" >view</button>
+            
+            </td>
+        </tr>
+            
+    </tbody>
+</table>
+
+<div>
+                  
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+
+
+</div>
+
+
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+
+<div>
+    <app-side-navigation-component></app-side-navigation-component>
+</div>

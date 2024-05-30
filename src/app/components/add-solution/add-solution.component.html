@@ -1,0 +1,168 @@
+<style>
+    h1 {
+        margin-left: 300px; /* Add an empty space on the left side of the title */
+    }
+
+    .table-container {
+        padding-left: 300px; /* Add an empty space on the left side of the table */
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center; /* Center the content of the table */
+    }
+
+    .table th {
+        text-align: right; /* Center the content of the table header */
+    }
+
+    .table th, .table td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+</style>
+ 
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+    class="content-container"
+  >
+   
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title"><a href="Regleback">Liste</a></h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <div class="col-12">
+          
+          <div class="card">
+            <div class="container">
+                <h5 class="card-title">Labels</h5>
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'es,fr,de,ja,ko' }, 'google_translate_element');
+                  }
+              </script>
+              <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              <div id="google_translate_element"></div>
+                <div class="table-responsive">
+
+<h3>create DataSource</h3>
+
+<form (ngSubmit) = "OnSubmitLabel()">
+    <div>
+        <label>Solution name</label>
+        <input type="text" class="form-control" id="nomlabel"
+             [(ngModel)] = "solution.nameS" name="nomlabel">
+    </div>
+
+    
+    <div>
+        <label>type </label>
+        <input type="text" class="form-control" id="typelabel"
+             [(ngModel)] = "solution.type" name="typelabel">
+    </div>
+
+    <div>
+        <label>Provider</label>
+        <input type="text" class="form-control" id="desc"
+             [(ngModel)] = "solution.provider" name="desc">
+    </div>
+
+    <div>
+        <label>Cost Type</label>
+        <input type="text" class="form-control" id="desc"
+             [(ngModel)] = "solution.costType" name="desc">
+    </div>
+
+   
+    
+
+    <button class="btn btn-success" type="submit">
+        Submit
+    </button>
+
+</form>
+
+<div>
+                  
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div>
+    <app-side-navigation-component></app-side-navigation-component>
+</div>
