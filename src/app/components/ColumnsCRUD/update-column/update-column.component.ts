@@ -50,7 +50,7 @@ export class UpdateColumnComponent {
     this.column.label= this.selectedlabel!;
     
     this.offerService.updateColumns(this.id,this.column).subscribe(data=>{
-      this.goToOfferList()
+      this.goToOfferList(); console.log(this.column.label);
     },
    );
   }

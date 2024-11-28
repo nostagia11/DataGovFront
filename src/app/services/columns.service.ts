@@ -10,7 +10,7 @@ export class ColumnsService {
 
   constructor(private http : HttpClient) { }
 
-  private baseURL = "http://localhost:8082/api/v1/columns"
+  private baseURL = "http://localhost:8085/api/v1/columns"
 
   getColumns():Observable<Columns[]>{
     return this.http.get<Columns[]>(`${this.baseURL}`);

@@ -1,20 +1,6 @@
-<div *ngIf="excelChanges">
-    <ul class="nav nav-tabs">
-      <li class="nav-item" *ngFor="let change of excelChanges; let i = index">
-        <a class="nav-link" [class.active]="i === 0" data-toggle="tab" href="#change{{i}}">Change {{i+1}}</a>
-      </li>
-    </ul>
+
   
-    <div class="tab-content">
-      <div *ngFor="let change of excelChanges; let i = index" [id]="'change'+i" class="tab-pane fade" [class.show]="i === 0">
-        <p>Date: {{ change.date }}</p>
-        <p>Sheet Name: {{ change.sheet }}</p>
-        <p>Cell Address: {{ change.cellAddress }}</p>
-        <p>Previous Value: {{ change.previousValue }}</p>
-        <p>Current Value: {{ change.currentValue }}</p>
-      </div>
-    </div>
-  </div>
+    
 
 
   

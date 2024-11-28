@@ -10,7 +10,7 @@ export class SoftwareSoluServiceService {
 
   constructor(private http : HttpClient) { }
 
-  private baseURL = "http://localhost:8082/api/v1/softwaresolu"
+  private baseURL = "http://localhost:8085/api/v1/softwaresolu"
 
   getSoftwareSolutions():Observable<SoftwareSolution[]>{
     return this.http.get<SoftwareSolution[]>(`${this.baseURL}`);

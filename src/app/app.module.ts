@@ -16,17 +16,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { ViewLineageComponent } from './components/view-lineage/view-lineage.component';
-import { UpdateSolutionComponent } from './components/update-solution/update-solution.component';
+import { UpdateSolutionComponent } from './components/solutions-component/update-solution/update-solution.component';
 import { SideNavigationComponentComponent } from './components/side-navigation-component/side-navigation-component.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddSolutionComponent } from './components/add-solution/add-solution.component';
-import { UpdateColumnComponent } from './components/update-column/update-column.component';
+import { UpdateColumnComponent } from './components/ColumnsCRUD/update-column/update-column.component';
 import { CommonModule } from '@angular/common';
 import { LabelsService } from './services/labels.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatOptionModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { DetailsSoluComponent } from './components/details-solu/details-solu.component';
+import { DetailsSoluComponent } from './components/solutions-component/details-solu/details-solu.component';
+import { DetailsColumnComponent } from './components/ColumnsCRUD/details-column/details-column.component';
+import { RegleComponent } from './components/Regles/regle/regle.component';
+import {  UpdateRegleComponent } from './components/Regles/update-regle/update-regle.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,10 @@ import { DetailsSoluComponent } from './components/details-solu/details-solu.com
     HeaderComponent,
     AddSolutionComponent,
     UpdateColumnComponent,
-    DetailsSoluComponent
+    DetailsSoluComponent,
+    DetailsColumnComponent,
+    RegleComponent,
+    UpdateRegleComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +66,8 @@ import { DetailsSoluComponent } from './components/details-solu/details-solu.com
          BrowserAnimationsModule,
        MatInputModule,
        MatOptionModule, MatFormFieldModule,
-       MatSelectModule
+       MatSelectModule,
+       NgxPaginationModule
        
   
     

@@ -10,7 +10,7 @@ export class LabelsService {
 
   constructor(private http : HttpClient) { }
 
-  private baseURL = "http://localhost:8082/api/v1/labels"
+  private baseURL = "http://localhost:8085/api/v1/labels"
 
   getLabels():Observable<Labels[]>{
     return this.http.get<Labels[]>(`${this.baseURL}`);

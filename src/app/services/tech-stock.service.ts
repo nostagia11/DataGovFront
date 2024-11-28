@@ -10,7 +10,7 @@ export class TechStockService {
 
   constructor(private http : HttpClient) { }
 
-  private baseURL = "http://localhost:8082/api/v1/techstock"
+  private baseURL = "http://localhost:8085/api/v1/techstock"
 
   getTechStock():Observable<TechStock[]>{
     return this.http.get<TechStock[]>(`${this.baseURL}`);

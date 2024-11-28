@@ -24,15 +24,15 @@ export class ColumnsComponent {
   private getColumns(){
     this.Columnservice.getColumns().subscribe(
       data=>{
-      this.Columns=data;
-      console.log(this.Columns.label);}
+      this.Columns=data
+     }
       );
       this.label=!!this.Columns.label;
-      console.log(this.Columns.label)
+      
   }
 
   detailColumn(id:number){
-    this.router.navigate(['detailColumn',id]);
+    this.router.navigate(['/detailColumn',id]);
   }
 
   updateColumn(id:number){

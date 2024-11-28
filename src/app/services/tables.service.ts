@@ -10,7 +10,7 @@ export class TablesService {
 
   constructor(private http : HttpClient) { }
 
-  private baseURL = "http://localhost:8082/api/v1/Tables"
+  private baseURL = "http://localhost:8085/api/v1/Tables"
 
   getTables():Observable<Tables[]>{
     return this.http.get<Tables[]>(`${this.baseURL}`);
