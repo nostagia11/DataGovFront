@@ -73,7 +73,7 @@
       <!-- Start Page Content -->
       <!-- ============================================================== -->
       <div class="row">
-        <div class="col-12">
+        <div class="col-6">
           
           <div class="card">
             <div class="container">
@@ -100,18 +100,15 @@
                         </thead>
                         <tbody>
                             <tr >
-                            
                                 <td>{{solution.nameS}}</td>
                                 <td>{{solution.type}}</td>
                                 <td>{{solution.provider}}</td>
                                 <td>{{solution.costType}}</td>
                                 <td>{{solution.registred_on}}</td>
-                                
                                 <td>
                                     <button  class="btn btn-primary"  (click)="updateSolution(solution.id_SOFR)">update</button>
                                     
                                     <button  routerLink="/viewLineage" routerLinkActive="active">View Lineage</button>
-                                
                                 </td>
                             </tr>
                                 
@@ -160,7 +157,4 @@
 
   
 
-<div>
-    <app-side-navigation-component></app-side-navigation-component>
-</div>
 

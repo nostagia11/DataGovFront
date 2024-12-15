@@ -1,66 +1,14 @@
 <router-outlet></router-outlet>
 
-<style>
-    h1 {
-        margin-left: 300px; /* Add an empty space on the left side of the title */
-    }
 
-    .table-container {
-        padding-left: 300px; /* Add an empty space on the left side of the table */
-    }
-
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center; /* Center the content of the table */
-    }
-
-    .table th {
-        text-align: right; /* Center the content of the table header */
-    }
-
-    .table th, .table td {
-        padding: 8px;
-        border: 1px solid #ddd;
-    }
-</style>
- 
   <!-- ============================================================== -->
   <!-- Main wrapper - style you can find in pages.scss -->
   <!-- ============================================================== -->
-  <div
-    id="main-wrapper"
-    data-layout="vertical"
-    data-navbarbg="skin5"
-    data-sidebartype="full"
-    data-sidebar-position="absolute"
-    data-header-position="absolute"
-    data-boxed-layout="full"
-    class="content-container"
-  >
+
    
 
-<div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <div class="page-breadcrumb">
-      <div class="row">
-        <div class="col-12 d-flex no-block align-items-center">
-          <h4 class="page-title"><a href="Regleback">Liste</a></h4>
-          <div class="ms-auto text-end">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Library
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="wrapper sidebar_minimize">
+   
   
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
@@ -72,63 +20,156 @@
       <!-- ============================================================== -->
       <!-- Start Page Content -->
       <!-- ============================================================== -->
-      <div class="row">
-        <div class="col-12">
-          
-          <div class="card">
-            <div class="container">
-                <h5 class="card-title">Data Sources</h5>
-                <script type="text/javascript">
-                  function googleTranslateElementInit() {
-                      new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'es,fr,de,ja,ko' }, 'google_translate_element');
-                  }
-              </script>
-              <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-              <div id="google_translate_element"></div>
-                <div class="table-responsive">
+      <div class="row row-demo-grid">
+        <div class="col-6">
+          <div class="container">
+            <div class="page-inner">
+              <div class="page-header">
+                <h3 class="fw-bold mb-3">Data Sources</h3>
+                <ul class="breadcrumbs mb-3">
+                  <li class="nav-home">
+                    <a href="#">
+                      <i class="icon-home"></i>
+                    </a>
+                  </li>
+                  <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">Data Sources</a>
+                  </li>
+                  <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">Data Sources</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="row row-demo-grid">
+            <div class="col-6">
+              
+              <div class="card">
+                <div class="container">
+                    <h5 class="fw-bold mb-3">Data Sources</h5>
                     
-                    <table class = "table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Solution Name </th>
-                                <th> Type</th>
-                                <th>Provider</th>
-                                <th>Cost type</th>
-                                <th>Registred_on</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor = "let solu of solutions">
-                              <td>{{solu.id_SOFR}}</td>
-                                <td>{{solu.nameS}}</td>
-                                <td>{{solu.type}}</td>
-                                <td>{{solu.provider}}</td>
-                                <td>{{solu.costType}}</td>
-                                <td>{{solu.registred_on}}</td>
-                                
-                                <td>
-                                    <button  class="btn btn-primary"  (click)="updateSolution(solu.id_SOFR)">update</button>
-                                    <button (click)="deleteSolution(solu.id_SOFR)" class="btn btn-danger" >delete</button>
-                                    <button  (click)="detailSolution(solu.id_SOFR)" class="btn btn-primary">View Details</button>
-                                    <button  (click)="viewLogs(solu.id_SOFR)" routerLinkActive="active">View Lineage</button>
-                                
-                                </td>
-                            </tr>
-                              
-                        </tbody>
-                    </table>
-               
-                <div>
-                  
+                  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <button  routerLink="/uploadsolutionTech" routerLinkActive="active" class="btn btn-primary" type="button">Upload</button>
+                      <button  routerLink="/addsolu" routerLinkActive="active" class="btn btn-primary" type="button">Add</button>
+                        <table id="basic-datatables"
+                        class="display table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Solution Name </th>
+                                    <th> Type</th>
+                                    <th>Provider</th>
+                                    <th>Cost type</th>
+                                    <th>Registred_on</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor = "let solu of solutions">
+                                 
+                                    <td>{{solu.nameS}}</td>
+                                    <td>{{solu.type}}</td>
+                                    <td>{{solu.provider}}</td>
+                                    <td>{{solu.costType}}</td>
+                                    <td>{{solu.registred_on}}</td>
+                                    
+                                    <td>
+                                     
+                                        <div class="form-button-action">
+                                          <button
+                                            type="button"
+                                            data-bs-toggle="tooltip"
+                                            title=""
+                                            class="btn btn-link btn-primary btn-lg"
+                                            data-original-title="Edit Task"
+                                            (click)="updateSolution(solu.id_SOFR)"
+                                             routerLinkActive="active"
+                                          >
+                                            <i class="fa fa-edit"></i>
+                                          </button>
+                                          <button
+                                            type="button"
+                                            data-bs-toggle="tooltip"
+                                            title=""
+                                            class="btn btn-link btn-danger"
+                                            data-original-title="Remove"
+                                            (click)="deleteSolution(solu.id_SOFR)"
+                                             routerLinkActive="active"
+                                          >
+                                            <i class="fa fa-times"></i>
+                                          </button>
+                                          <button type="button"
+                                          data-bs-toggle="tooltip"
+                                          title=""
+                                          class="btn btn-link btn-danger"
+                                          data-original-title="Remove"
+                                          (click)="detailSolution(solu.id_SOFR)"
+                                          routerLinkActive="active">
+                                            <i class="fas fa-th-list"></i>
+      
+                                          </button>
+                                          
+                                          <button type="button"
+                                          data-bs-toggle="tooltip"
+                                          title=""
+                                          class="btn btn-link btn-danger"
+                                          data-original-title="Remove"
+                                          (click)="viewLogs(solu.id_SOFR)"
+                                          routerLinkActive="active">
+                                            <i class="fas fa-history"></i>
+      
+                                          </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                  
+                            </tbody>
+                        </table>
+                   
+                    <div>
+                      
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+    
+          
+          
+          </div>
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+              </div>
+              </div>
+            </div>
+          </div>
+          
+         
       </div>
+
+      
+      
       <!-- ============================================================== -->
       <!-- End PAge Content -->
+
+
+      
       <!-- ============================================================== -->
       <!-- ============================================================== -->
       <!-- Right sidebar -->
@@ -148,21 +189,17 @@
     <!-- ============================================================== -->
     <!-- End footer -->
     <!-- ============================================================== -->
-   
-
 </div>
 
 
-  </div>
 
 
 
 
 
-<button  routerLink="/addsolu" routerLinkActive="active" class="btn btn-primary" type="button">Add</button>
-<button  routerLink="/uploadsolutionTech" routerLinkActive="active" class="btn btn-primary" type="button">Upload</button>
 
-<div>
-    <app-side-navigation-component></app-side-navigation-component>
-</div>
+
+
+
+
 

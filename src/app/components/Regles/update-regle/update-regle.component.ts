@@ -39,7 +39,7 @@ export class UpdateRegleComponent {
       this.gotoList();
   }
   gotoList() {
-    this.router.navigate(['/regle']);
+    this.router.navigate(['/listeregles']);
   }
 
 

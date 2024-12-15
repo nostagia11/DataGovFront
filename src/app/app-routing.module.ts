@@ -44,7 +44,7 @@ const routes: Routes = [
 
   //regle
   {path: 'listregles', component: RegleComponent },
-  {path: 'updateregle', component: UpdateRegleComponent },
+  {path: 'updateregle/:id', component: UpdateRegleComponent },
   
 
 ];
