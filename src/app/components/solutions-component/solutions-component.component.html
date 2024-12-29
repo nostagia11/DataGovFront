@@ -1,194 +1,171 @@
-<router-outlet></router-outlet>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
 
 
-  <!-- ============================================================== -->
-  <!-- Main wrapper - style you can find in pages.scss -->
-  <!-- ============================================================== -->
-
-   
-
-<div class="wrapper sidebar_minimize">
-   
-  
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
-      <!-- ============================================================== -->
-      <!-- Start Page Content -->
-      <!-- ============================================================== -->
-      <div class="row row-demo-grid">
-        <div class="col-6">
-          <div class="container">
-            <div class="page-inner">
-              <div class="page-header">
-                <h3 class="fw-bold mb-3">Data Sources</h3>
-                <ul class="breadcrumbs mb-3">
-                  <li class="nav-home">
-                    <a href="#">
-                      <i class="icon-home"></i>
-                    </a>
-                  </li>
-                  <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Data Sources</a>
-                  </li>
-                  <li class="separator">
-                    <i class="icon-arrow-right"></i>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#">Data Sources</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="row">
-                <div class="row row-demo-grid">
-            <div class="col-6">
-              
-              <div class="card">
-                <div class="container">
-                    <h5 class="fw-bold mb-3">Data Sources</h5>
-                    
-                  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <button  routerLink="/uploadsolutionTech" routerLinkActive="active" class="btn btn-primary" type="button">Upload</button>
-                      <button  routerLink="/addsolu" routerLinkActive="active" class="btn btn-primary" type="button">Add</button>
-                        <table id="basic-datatables"
-                        class="display table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Solution Name </th>
-                                    <th> Type</th>
-                                    <th>Provider</th>
-                                    <th>Cost type</th>
-                                    <th>Registred_on</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor = "let solu of solutions">
-                                 
-                                    <td>{{solu.nameS}}</td>
-                                    <td>{{solu.type}}</td>
-                                    <td>{{solu.provider}}</td>
-                                    <td>{{solu.costType}}</td>
-                                    <td>{{solu.registred_on}}</td>
-                                    
-                                    <td>
-                                     
-                                        <div class="form-button-action">
-                                          <button
-                                            type="button"
-                                            data-bs-toggle="tooltip"
-                                            title=""
-                                            class="btn btn-link btn-primary btn-lg"
-                                            data-original-title="Edit Task"
-                                            (click)="updateSolution(solu.id_SOFR)"
-                                             routerLinkActive="active"
-                                          >
-                                            <i class="fa fa-edit"></i>
-                                          </button>
-                                          <button
-                                            type="button"
-                                            data-bs-toggle="tooltip"
-                                            title=""
-                                            class="btn btn-link btn-danger"
-                                            data-original-title="Remove"
-                                            (click)="deleteSolution(solu.id_SOFR)"
-                                             routerLinkActive="active"
-                                          >
-                                            <i class="fa fa-times"></i>
-                                          </button>
-                                          <button type="button"
-                                          data-bs-toggle="tooltip"
-                                          title=""
-                                          class="btn btn-link btn-danger"
-                                          data-original-title="Remove"
-                                          (click)="detailSolution(solu.id_SOFR)"
-                                          routerLinkActive="active">
-                                            <i class="fas fa-th-list"></i>
-      
-                                          </button>
-                                          
-                                          <button type="button"
-                                          data-bs-toggle="tooltip"
-                                          title=""
-                                          class="btn btn-link btn-danger"
-                                          data-original-title="Remove"
-                                          (click)="viewLogs(solu.id_SOFR)"
-                                          routerLinkActive="active">
-                                            <i class="fas fa-history"></i>
-      
-                                          </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                  
-                            </tbody>
-                        </table>
-                   
-                    <div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          
-          
-          </div>
-          <!-- ============================================================== -->
-          <!-- End PAge Content -->
-          <!-- ============================================================== -->
-          <!-- ============================================================== -->
-          <!-- Right sidebar -->
-          <!-- ============================================================== -->
-          <!-- .right-sidebar -->
-          <!-- ============================================================== -->
-          <!-- End Right sidebar -->
-          <!-- ============================================================== -->
-              </div>
-              </div>
-            </div>
-          </div>
-          
-         
-      </div>
-
-      
-      
-      <!-- ============================================================== -->
-      <!-- End PAge Content -->
 
 
-      
-      <!-- ============================================================== -->
-      <!-- ============================================================== -->
-      <!-- Right sidebar -->
-      <!-- ============================================================== -->
-      <!-- .right-sidebar -->
-      <!-- ============================================================== -->
-      <!-- End Right sidebar -->
-      <!-- ============================================================== -->
+
+
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+
+
+<div class="container">
+  <div class="page-inner">
+    <div class="page-header">
+      <h3 class="fw-bold mb-3">Data Sources</h3>
+      <ul class="breadcrumbs mb-3">
+        <li class="nav-home">
+          <a href="#">
+            <i class="icon-home"></i>
+          </a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="#">Data Sources</a>
+        </li>
+        <li class="separator">
+          <i class="icon-arrow-right"></i>
+        </li>
+        <li class="nav-item">
+          <a href="#">Data Sources</a>
+        </li>
+      </ul>
     </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-   
-    <!-- ============================================================== -->
-    <!-- End footer -->
-    <!-- ============================================================== -->
+    <div class="row">
+      <div class="row row-demo-grid">
+
+
+        <div class="card">
+          <div class="card-header">
+            <div class="d-flex align-items-center">
+              <h4 class="card-title">Data Sources</h4>
+              <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" data-bs-target="#addRowModal"
+                routerLink="/addsolu" routerLinkActive="active">
+                <i class="fa fa-plus"></i>
+                Add
+              </button>
+              <button class="btn btn-primary btn-round ms-auto" data-bs-toggle="modal" data-bs-target="#addRowModal"
+                routerLink="/uploadsolutionTech" routerLinkActive="active">
+                <i class="fa fa-plus"></i>
+                Upload
+              </button>
+
+            </div>
+
+          </div>
+
+
+
+
+          <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          <div class="card-body">
+            <div class="table-responsive">
+
+              <table id="basic-datatables" class="display table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>Solution Name </th>
+                    <th> Type</th>
+                    <th>Provider</th>
+                    <th>Cost type</th>
+                    <th>Registred_on</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let solu of solutions">
+
+                    <td>{{solu.nameS}}</td>
+                    <td>{{solu.type}}</td>
+                    <td>{{solu.provider}}</td>
+                    <td>{{solu.costType}}</td>
+                    <td>{{solu.registred_on}}</td>
+
+                    <td>
+
+                      <div class="form-button-action">
+                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg"
+                          data-original-title="Edit Task" (click)="updateSolution(solu.id_SOFR)"
+                          routerLinkActive="active">
+                          <i class="fa fa-edit"></i>
+                        </button>
+                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                          data-original-title="Remove" (click)="deleteSolution(solu.id_SOFR)" routerLinkActive="active">
+                          <i class="fa fa-times"></i>
+                        </button>
+
+                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                          data-original-title="Remove" (click)="detailSolution(solu.id_SOFR)" routerLinkActive="active">
+                          <i class="fas fa-th-list"></i>
+                        </button>
+
+                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger"
+                          data-original-title="Remove" (click)="viewLogs(solu.id_SOFR)" routerLinkActive="active">
+                          <i class="fas fa-history"></i>
+
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Right sidebar -->
+        <!-- ============================================================== -->
+        <!-- .right-sidebar -->
+        <!-- ============================================================== -->
+        <!-- End Right sidebar -->
+        <!-- ============================================================== -->
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container-fluid d-flex justify-content-between">
+      <nav class="pull-left">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" >
+              DataMaster
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="copyright">
+        2024  by
+        <a >DataMasters</a>
+      </div>
+     
+    </div>
+  </footer>
 </div>
 
 
@@ -197,9 +174,40 @@
 
 
 
+  <!-- ============================================================== -->
+  <!-- End PAge Content -->
+
+
+
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Right sidebar -->
+  <!-- ============================================================== -->
+  <!-- .right-sidebar -->
+  <!-- ============================================================== -->
+  <!-- End Right sidebar -->
+  <!-- ============================================================== -->
+
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- footer -->
+  <!-- ============================================================== -->
+
+  <!-- ============================================================== -->
+  <!-- End footer -->
+  <!-- ============================================================== -->
 
 
 
 
 
 
+
+
+
+
+
+  <router-outlet></router-outlet>
+  

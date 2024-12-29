@@ -31,6 +31,7 @@ import { DetailsColumnComponent } from './components/ColumnsCRUD/details-column/
 import { RegleComponent } from './components/Regles/regle/regle.component';
 import {  UpdateRegleComponent } from './components/Regles/update-regle/update-regle.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SqlServerConnectorComponent } from './components/sql-server-connector/sql-server-connector.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     DetailsSoluComponent,
     DetailsColumnComponent,
     RegleComponent,
-    UpdateRegleComponent
+    UpdateRegleComponent,
+    SqlServerConnectorComponent
   ],
   imports: [
     BrowserModule,
